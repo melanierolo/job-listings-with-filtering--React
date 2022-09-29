@@ -1,0 +1,13 @@
+.jobs-header {
+  background-color: #5da5a4;
+  background-image: url(../../assets/header/bg-header-desktop.svg);
+  height: 155px;
+}
+
+@media only screen and (max-width: 600px) {
+  jobs-header {
+    background-color: #5da5a4;
+
+    background-image: url(../../assets/header/bg-header-mobile.svg);
+  }
+}
