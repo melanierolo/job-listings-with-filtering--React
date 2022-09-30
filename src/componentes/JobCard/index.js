@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import ButtonTag from "../ButtonTag";
 
 export default function JobCard() {
   return (
@@ -24,6 +25,7 @@ export default function JobCard() {
           <span>HTML</span>
           <span>CSS</span>
           <span>JavaScript</span>
+          <ButtonTag></ButtonTag>
         </div>
       </div>
     </>
