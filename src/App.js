@@ -7,7 +7,9 @@ function App() {
   return (
     <>
       <Header></Header>
-      <JobCard></JobCard>
+      <div className="job-page">
+        <JobCard></JobCard>
+      </div>
     </>
   );
 }
