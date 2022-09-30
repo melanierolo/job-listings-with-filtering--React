@@ -3,10 +3,11 @@
   align-items: center;
   background-color: aqua;
   border-radius: 0.5rem;
-  border: 1px solid #acacac;
+  border: none;
   background-color: white;
-  box-shadow: 5px 5px 5px #999;
-  margin: 0.5rem 8rem;
+  box-shadow: 2px 16px 28px -8px rgba(66, 78, 78, 0.2);
+  /*border-left: 5px solid #5ca5a5;*/
+  margin: 1.5rem 8rem;
   padding: 2%;
 }
 
@@ -16,6 +17,9 @@
   padding-right: 30px;
 }
 
+.job-card .job-description {
+  width: 100%;
+}
 .job-card .job-description .job-company-name {
   color: hsl(180, 29%, 50%);
 }

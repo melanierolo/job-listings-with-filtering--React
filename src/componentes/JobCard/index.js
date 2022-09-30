@@ -2,22 +2,25 @@ import React from "react";
 import "./style.css";
 import ButtonTag from "../ButtonTag";
 
-export default function JobCard() {
+export default function JobCard(props) {
+  console.log(props);
+  /*Destructuración ES6 */
+  const { company, position, postedAt, contract, location } = props;
+
   return (
     <>
       <div className="job-card">
         <div className="job-logo">
           <figure>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png"
-              alt="company logo"
-            />
+            <img alt="company logo" />
           </figure>
         </div>
         <div className="job-description">
-          <h3 className="job-company-name">Photosnap</h3>
-          <h2 className="job-position">Senior Frontend Developer</h2>
-          <p className="job-details">1d ago • Full Time • USA only </p>
+          <h3 className="job-company-name">{company}</h3>
+          <h2 className="job-position">{position}</h2>
+          <p className="job-details">
+            {postedAt} • {contract} • {location}
+          </p>
         </div>
         <div className="job-tags">
           <span>Frontend</span>
