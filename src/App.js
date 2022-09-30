@@ -14,6 +14,7 @@ function App() {
         {jobsData.map((job, i) => {
           /*Destructuración ES6 */
           const {
+            logo,
             company,
             position,
             postedAt,
@@ -27,6 +28,7 @@ function App() {
           return (
             <JobCard
               key={i}
+              logo={logo}
               company={company}
               position={position}
               postedAt={postedAt}

@@ -6,6 +6,7 @@ export default function JobCard(props) {
   console.log(props);
   /*Destructuración ES6 */
   const {
+    logo,
     company,
     position,
     postedAt,
@@ -24,7 +25,7 @@ export default function JobCard(props) {
       <div className="job-card">
         <div className="job-logo">
           <figure>
-            <img alt="company logo" />
+            <img src={`${logo}`} alt={`company ${company}`} />
           </figure>
         </div>
         <div className="job-description">
