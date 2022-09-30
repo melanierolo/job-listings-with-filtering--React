@@ -1,0 +1,51 @@
+.job-card {
+  display: flex;
+  align-items: center;
+  background-color: aqua;
+  border-radius: 0.5rem;
+  border: 1px solid #acacac;
+  background-color: white;
+  box-shadow: 5px 5px 5px #999;
+  margin: 0.5rem 8rem;
+  padding: 2%;
+}
+
+.job-card .job-logo img {
+  width: 6rem;
+  height: 6rem;
+  padding-right: 30px;
+}
+
+.job-card .job-description .job-company-name {
+  color: hsl(180, 29%, 50%);
+}
+
+.job-card .job-description .job-position {
+  color: hsl(180, 14%, 20%);
+}
+
+.job-card .job-description .job-details {
+  color: hsl(180, 6%, 39%);
+}
+.job-card .job-tags {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+
+@media screen and (max-width: 600px) {
+  .job-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: greenyellow;
+    margin: 0.5rem 2rem;
+  }
+  .job-card .job-tags {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}
