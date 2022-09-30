@@ -5,7 +5,19 @@ import ButtonTag from "../ButtonTag";
 export default function JobCard(props) {
   console.log(props);
   /*Destructuración ES6 */
-  const { company, position, postedAt, contract, location } = props;
+  const {
+    company,
+    position,
+    postedAt,
+    contract,
+    location,
+    languages,
+    tools,
+    role,
+    level,
+  } = props;
+
+  let listTags = languages.concat(tools, role, level);
 
   return (
     <>
@@ -23,12 +35,9 @@ export default function JobCard(props) {
           </p>
         </div>
         <div className="job-tags">
-          <span>Frontend</span>
-          <span>Senior</span>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <ButtonTag></ButtonTag>
+          {listTags.map((tag, i) => (
+            <ButtonTag key={i} tagName={tag} />
+          ))}
         </div>
       </div>
     </>

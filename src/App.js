@@ -13,7 +13,17 @@ function App() {
       <div className="job-page">
         {jobsData.map((job, i) => {
           /*Destructuración ES6 */
-          const { company, position, postedAt, contract, location } = job;
+          const {
+            company,
+            position,
+            postedAt,
+            contract,
+            location,
+            languages,
+            tools,
+            role,
+            level,
+          } = job;
           return (
             <JobCard
               key={i}
@@ -22,6 +32,10 @@ function App() {
               postedAt={postedAt}
               contract={contract}
               location={location}
+              languages={languages}
+              tools={tools}
+              role={role}
+              level={level}
             />
           );
         })}
