@@ -12,7 +12,7 @@ export default function Footer() {
         </a>
       </p>
       <p>
-        It was develop by <b>Melanie Rodas</b>
+        It was developed by <b>Melanie Rodas</b>
       </p>
     </div>
   );
