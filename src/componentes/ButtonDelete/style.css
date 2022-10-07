@@ -1,0 +1,18 @@
+.button-delete {
+  padding: 18px 10px;
+  border-radius: 0 0.3rem 0.3rem 0rem;
+  border: none;
+  background-color: hsl(180, 29%, 50%);
+  font-size: 15px;
+  font-weight: 700;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button-delete:hover {
+  background-color: hsl(180, 14%, 20%);
+  color: white;
+}

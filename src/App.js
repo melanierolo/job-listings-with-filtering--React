@@ -1,17 +1,43 @@
 import React from "react";
 import "./App.css";
+import { useState } from "react";
 import Header from "./componentes/Header";
 import Footer from "./componentes/Footer";
 import JobCard from "./componentes/JobCard";
 import allJobs from "./data/data.json";
+import FilterBar from "./componentes/FilterBar";
 
 function App() {
   const jobsData = allJobs.jobs;
   console.log(allJobs.jobs);
+  const [filterTags, setFilterTags] = useState([]);
+
+  const addFilterTag = (filterTag) => {
+    if (!filterTags.includes(filterTag)) {
+      setFilterTags([...filterTags, filterTag]);
+    }
+  };
+
+  const deleteFilterTag = (filterTag) => {
+    const newFilterTag = filterTags.filter((id) => id !== filterTag);
+    setFilterTags(newFilterTag);
+  };
+
+  const clearAll = () => {
+    setFilterTags([]);
+  };
+
   return (
     <>
       <Header></Header>
       <div className="job-page">
+        {filterTags.length > 0 && (
+          <FilterBar
+            tags={filterTags}
+            removeFilterTag={deleteFilterTag}
+            clearAll={clearAll}
+          />
+        )}
         {jobsData.map((job, i) => {
           /*Destructuración ES6 */
           const {
@@ -39,6 +65,7 @@ function App() {
               tools={tools}
               role={role}
               level={level}
+              setTags={addFilterTag}
             />
           );
         })}

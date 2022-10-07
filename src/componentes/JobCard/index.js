@@ -16,6 +16,7 @@ export default function JobCard(props) {
     tools,
     role,
     level,
+    setTags,
   } = props;
 
   let listTags = languages.concat(tools, role, level);
@@ -37,7 +38,7 @@ export default function JobCard(props) {
         </div>
         <div className="job-tags">
           {listTags.map((tag, i) => (
-            <ButtonTag key={i} tagName={tag} />
+            <ButtonTag key={i} tagName={tag} setTags={setTags} />
           ))}
         </div>
       </div>
