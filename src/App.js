@@ -9,7 +9,9 @@ import FilterBar from "./componentes/FilterBar";
 
 function App() {
   const jobsData = allJobs.jobs;
-  console.log(allJobs.jobs);
+  //console.log(allJobs.jobs);
+
+  //Function for FilterBar
   const [filterTags, setFilterTags] = useState([]);
 
   const addFilterTag = (filterTag) => {

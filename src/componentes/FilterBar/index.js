@@ -5,7 +5,7 @@ import ButtonDelete from "../ButtonDelete";
 export default function FilterBar(props) {
   /*Destructuración ES6 */
   const { tags, removeFilterTag, clearAll } = props;
-  console.log("setTags -button", props);
+  //console.log("setTags -button", props);
   const clicked = (a) => {
     console.log("clicked a Tag in FilterBar", a);
   };
@@ -19,7 +19,7 @@ export default function FilterBar(props) {
                 <div className="filter-tag">
                   <li
                     className="filter-name"
-                    key={id}
+                    key={id.toString()}
                     tagName={tag}
                     setTags={clicked}
                   >

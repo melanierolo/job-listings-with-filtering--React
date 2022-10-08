@@ -3,7 +3,7 @@ import "./style.css";
 import ButtonTag from "../ButtonTag";
 
 export default function JobCard(props) {
-  console.log(props);
+  //console.log("JobCard",props);
   /*Destructuración ES6 */
   const {
     logo,
