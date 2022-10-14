@@ -1,8 +1,11 @@
-# Job listings with filtering - React
+# Job listings with filtering - React (Frontend Mentor)
+
+
+![desktop-preview](https://user-images.githubusercontent.com/89095047/195946641-231dbf23-d030-4a05-bd00-413fb5d4ad14.jpg)
 
 ## Description 🙂
 
-This project was a challenge from [https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt](Frontend Mentor) and that's helped me to practice with data.json and filter data.
+This project was a challenge from [Frontend Mentor](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt) and that's helped me to practice with data.json and filter data.
 
 ## Technology used 👨‍🏭
 
