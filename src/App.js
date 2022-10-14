@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./componentes/Header";
 import Footer from "./componentes/Footer";
 import JobCard from "./componentes/JobCard";
@@ -9,7 +9,7 @@ import FilterBar from "./componentes/FilterBar";
 
 function App() {
   const jobsData = allJobs.jobs;
-  //console.log(allJobs.jobs);
+  console.log(allJobs.jobs);
 
   //Function for FilterBar
   const [filterTags, setFilterTags] = useState([]);
@@ -29,6 +29,32 @@ function App() {
     setFilterTags([]);
   };
 
+  //Filtered data
+  const [filteredJobsData, setFilteredJobsData] = useState([]);
+  console.log("filter tags", filterTags);
+  const modifiedJobsData = (filterTags, jobsData) => {
+    if (filterTags.length > 0) {
+      const newJobsData = filteredJobsData.filter((job) => {
+        return filterTags.every((filterTag) => {
+          return (
+            job.role === filterTag ||
+            job.level === filterTag ||
+            job.languages.includes(filterTag) ||
+            job.tools.includes(filterTag)
+          );
+        });
+      });
+      setFilteredJobsData(newJobsData);
+      console.log("filtered", newJobsData);
+    } else {
+      setFilteredJobsData(jobsData);
+    }
+  };
+  //useEffect
+  useEffect(() => {
+    modifiedJobsData(filterTags, jobsData);
+  }, [filterTags, jobsData]);
+
   return (
     <>
       <Header></Header>
@@ -40,7 +66,7 @@ function App() {
             clearAll={clearAll}
           />
         )}
-        {jobsData.map((job, i) => {
+        {filteredJobsData.map((job, i) => {
           /*Destructuración ES6 */
           const {
             logo,
