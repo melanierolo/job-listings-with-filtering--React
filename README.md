@@ -21,6 +21,13 @@ This project was a challenge from [Frontend Mentor](https://www.frontendmentor.i
     <li>Filter job listings based on the categories selected</li>
 </ul>
 
+## Live deployment
+
+<b>[Vercel Link](https://job-listings-with-filtering-brown.vercel.app/)</b>
+
+![job-listings](https://user-images.githubusercontent.com/89095047/195966773-ad2949e0-8572-4b89-b8fd-6058dacef25e.gif)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
