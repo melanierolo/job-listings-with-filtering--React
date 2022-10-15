@@ -1,6 +1,5 @@
 # Job listings with filtering - React (Frontend Mentor)
 
-
 ![desktop-preview](https://user-images.githubusercontent.com/89095047/195946641-231dbf23-d030-4a05-bd00-413fb5d4ad14.jpg)
 
 ## Description 🙂
@@ -12,6 +11,14 @@ This project was a challenge from [Frontend Mentor](https://www.frontendmentor.i
 <ul>
   <li><b>JS library/framework: </b>React(useState) for building user interfaces and components</li>
   <li><b>Styles: </b>CSS was used on the stylesheet. Also, flexbox to develop a responsive design</li>
+</ul>
+
+## Features
+
+<ul>
+    <li>View the optimal layout for the site depending on their device's screen size</li>
+    <li>See hover states for all interactive elements on the page</li>
+    <li>Filter job listings based on the categories selected</li>
 </ul>
 
 ## Available Scripts
